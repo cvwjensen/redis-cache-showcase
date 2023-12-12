@@ -1,7 +1,5 @@
 package dk.lundogbendsen.springbootcourse.rediscache;
 
-import dk.lundogbendsen.springbootcourse.rediscache.jpa.PersonRepository;
-import dk.lundogbendsen.springbootcourse.rediscache.jpa.model.Person;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,17 +14,10 @@ public class RedisCacheApplication {
         SpringApplication.run(RedisCacheApplication.class, args);
     }
 
+
     @Bean
-    CommandLineRunner runner(PersonRepository personRepository) {
-        return args -> {
-            personRepository.save(new Person("Lars", 21L));
-        };
-    }
-//    @Bean
     CommandLineRunner runner(ServiceCached serviceCached) {
         return args -> {
-
-            System.out.println("serviceCached = " + serviceCached.getClass());
             System.out.println("Is 2 prime? " + serviceCached.isPrime(2));
             System.out.println("Is 2 prime? " + serviceCached.isPrime(2));
 
