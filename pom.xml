@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dk.lundogbendsen.springbootcourse</groupId>
-    <artifactId>redis-cache</artifactId>
+    <artifactId>redis-cache-showcase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>redis-cache</name>
     <description>redis-cache</description>
