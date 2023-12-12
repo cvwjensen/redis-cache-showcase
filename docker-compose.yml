@@ -1,0 +1,19 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    ports:
+    - 6379:6379
+
+  redis-insight:
+    image: redislabs/redisinsight:latest
+    ports:
+    - 8001:8001
+    environment:
+      - REDIS_URI=redis://redis:6379
+      - REDIS_PASSWORD=redis
+      - REDIS_TLS=false
+      - REDIS_DB=0
+      - HTTP_USER=admin
+      - HTTP_PASSWORD=admin
+      - HTTP_PORT=8001
