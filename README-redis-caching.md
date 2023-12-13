@@ -33,7 +33,7 @@ public class ServiceCached {
     public CommandLineRunner runner(ServiceCached serviceCached) {
         return args -> {
             System.out.println("serviceCached = " + serviceCached.getClass());
-            System.out.println("Test your service in this scope...");
+            System.out.println(serviceCached.fibonacci(13));
         };
     }
 
