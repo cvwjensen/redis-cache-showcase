@@ -12,39 +12,39 @@ public class Person {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
-    private Long age;
+    private String firstName;
+    private String lastName;
 
-    public Person(String name, Long age) {
-        this.name = name;
-        this.age = age;
-    }
 
     public Person() {
-
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public Long getAge() {
-        return age;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setAge(Long age) {
-        this.age = age;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
